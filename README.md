@@ -1,5 +1,4 @@
-# Let's create a markdown file with the provided content for the user.
-file_content = """
+
 # ARM Architecture
 
 ## Introduction
