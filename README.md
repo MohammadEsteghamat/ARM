@@ -328,4 +328,4 @@ Here are the different clock sources available in STM32 microcontrollers:
 ---
 
 This guide explains how to configure clock sources and output clock signals using STM32 microcontrollers for various applications, including multi-microcontroller synchronization and precise external signal calibration.
-
+![](Pictures/1.png)
