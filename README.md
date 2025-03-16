@@ -328,7 +328,63 @@ Here are the different clock sources available in STM32 microcontrollers:
 ---
 
 This guide explains how to configure clock sources and output clock signals using STM32 microcontrollers for various applications, including multi-microcontroller synchronization and precise external signal calibration.
+
+# Settings in STM32CubeIDE
+
+## Master Clock Output (MCO) Configuration
+
+In **STM32CubeIDE**, you can enable the **MCO** pin from the **Clock Configuration** section. To configure it, follow these steps:
+
+1. Go to the **Clock Configuration** section.
+2. In the **MCO1 Configuration** section, select the clock source (you can choose from **HSE**, **HSI**, **SYSCLK**, or **PLL**).
+3. Set the desired frequency and signal format (direct or processed through PLL).
+
+With this setup, you'll be able to output the clock signal from various internal or external sources to the MCO pin of the microcontroller.
+---
 ![](Pictures/1.png)
+![](Pictures/5.png)
+![](Pictures/4.png)
+## Bypass Clock Source Configuration
+
+To enable the **Bypass Clock Source** feature in **STM32CubeIDE**:
+
+1. Go to the **Clock Configuration** section.
+2. In the **HSE Configuration** section, enable the **Bypass** option.
+3. This option allows you to feed the external clock signal directly into the microcontroller without processing it through internal systems like PLL.
+
+---
+
+## Crystal and Ceramic Resonator Configuration
+
+In **STM32CubeIDE**, to configure a **crystal** or **ceramic resonator** as the external clock source:
+
+1. Go to the **Clock Configuration** section.
+2. In the **HSE Configuration** section, select whether to use a **crystal** or a **ceramic resonator** as the clock source.
+3. Ensure the crystal or ceramic resonator's frequency is correct and aligns with the microcontroller's settings.
+
+These configurations allow you to use precise external sources to generate the clock signal.
+
+---
+
+## Clock Sources Configuration
+
+In **STM32CubeIDE**, you can configure various clock sources like **HSI**, **LSI**, **HSE**, and **PLL** for specific use cases:
+
+1. For configuring **HSI** (High-Speed Internal Clock):
+   - Default Frequency: 8 MHz.
+   
+2. For configuring **LSI** (Low-Speed Internal Clock):
+   - Default Frequency: 40 kHz.
+   
+3. For configuring **HSE** (High-Speed External Clock):
+   - Frequency: 4 MHz to 16 MHz.
+
+4. For configuring **PLL** (Phase-Locked Loop):
+   - Frequency: up to 24 MHz.
+
+You can easily configure these settings via the **Clock Configuration** section in **STM32CubeIDE**.
+
+
 ![](Pictures/2.png)
 ![](Pictures/3.png)
-![](Pictures/4.png)
+
