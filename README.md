@@ -59,7 +59,7 @@ Each instruction is executed sequentially, leading to longer execution time. For
 ### With Pipelining
 Each stage runs in parallel, significantly reducing total execution time. Instead of waiting for one instruction to finish before starting the next, different stages work simultaneously. With pipelining, the same task would take:
 
-((6 + 3 + 3 = 12 \text{ minutes}\)
+\6 + 3 + 3 = 12 \text{ minutes}\
 
 This technique significantly improves processor efficiency and is widely used in ARM processors.
 
