@@ -1,3 +1,5 @@
+# Let's create a markdown file with the provided content for the user.
+file_content = """
 # ARM Architecture
 
 ## Introduction
@@ -156,9 +158,6 @@ The STM32 microcontrollers from STMicroelectronics follow a structured naming co
 STM32 Microcontroller Naming Structure
 The STM32 microcontroller names typically follow this structure:
 
-swift
-Copy
-Edit
 STM32<family/series><core><memory size><package type>
 Example: STM32F407VG
 STM32: Refers to the STM32 family of microcontrollers.
@@ -227,5 +226,5 @@ STM32U	Ultra-low-power microcontrollers for battery-powered applications.
 ✅ **Embedded Systems** (Arduino, Raspberry Pi)  
 ✅ **Servers & Supercomputers** (AWS Graviton)  
 ✅ **Smart Cars & IoT Devices**  
-
+"""
 
