@@ -116,3 +116,24 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 ## Conclusion
 
 These GPIO functions are essential for controlling and managing the input/output pins on STM32 microcontrollers using HAL. With these functions, you can set up GPIO pins for digital I/O, handle interrupts, and control external devices like LEDs, buttons, and sensors.
+
+### 6. `HAL_GPIO_LockPin(GPIOx, GPIO_PIN_x)`
+**Description:**  
+This function locks the configuration of a GPIO pin, preventing further changes to its settings. The pin can only be unlocked by a reset of the microcontroller.
+
+**Use Case:**
+- **Pin Protection:** When you have configured a pin for a specific function (e.g., SPI, I2C, or UART), you can lock that pin to prevent accidental changes.
+- **Configuration Stability:** This ensures that the pin configuration remains unchanged even if other functions or configuration code is executed.
+- **Prevention of Human or Code Errors:** Once locked, the pin's configuration cannot be altered until the microcontroller is reset.
+
+**Example: Locking Pin PA5**
+```cpp
+// Lock pin PA5
+HAL_GPIO_LockPin(GPIOA, GPIO_PIN_5);
+```
+
+After calling this function, Pin `PA5` will be locked, and its configuration cannot be changed until the microcontroller is reset.
+
+**Notes:**
+- Locking is useful for pins that are configured as input/output or for specific functions.
+- Once a pin is locked, no further changes to its configuration can be made through HAL functions.
