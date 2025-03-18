@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"lcd_drive\startup_stm32f103xb.o"
+"lcd_drive\main.o"
+"lcd_drive\gpio.o"
+"lcd_drive\stm32f1xx_it.o"
+"lcd_drive\stm32f1xx_hal_msp.o"
+"lcd_drive\lcd.o"
+"lcd_drive\stm32f1xx_hal_gpio_ex.o"
+"lcd_drive\stm32f1xx_hal.o"
+"lcd_drive\stm32f1xx_hal_rcc.o"
+"lcd_drive\stm32f1xx_hal_rcc_ex.o"
+"lcd_drive\stm32f1xx_hal_gpio.o"
+"lcd_drive\stm32f1xx_hal_dma.o"
+"lcd_drive\stm32f1xx_hal_cortex.o"
+"lcd_drive\stm32f1xx_hal_pwr.o"
+"lcd_drive\stm32f1xx_hal_flash.o"
+"lcd_drive\stm32f1xx_hal_flash_ex.o"
+"lcd_drive\stm32f1xx_hal_exti.o"
+"lcd_drive\system_stm32f1xx.o"
+--strict --scatter "lcd_drive\lcd_drive.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "lcd_drive.map" -o lcd_drive\lcd_drive.axf
