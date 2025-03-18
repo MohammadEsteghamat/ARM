@@ -1,0 +1,22 @@
+--cpu Cortex-M3
+"writepin\startup_stm32f103xb.o"
+"writepin\main.o"
+"writepin\gpio.o"
+"writepin\stm32f1xx_it.o"
+"writepin\stm32f1xx_hal_msp.o"
+"writepin\stm32f1xx_hal_gpio_ex.o"
+"writepin\stm32f1xx_hal.o"
+"writepin\stm32f1xx_hal_rcc.o"
+"writepin\stm32f1xx_hal_rcc_ex.o"
+"writepin\stm32f1xx_hal_gpio.o"
+"writepin\stm32f1xx_hal_dma.o"
+"writepin\stm32f1xx_hal_cortex.o"
+"writepin\stm32f1xx_hal_pwr.o"
+"writepin\stm32f1xx_hal_flash.o"
+"writepin\stm32f1xx_hal_flash_ex.o"
+"writepin\stm32f1xx_hal_exti.o"
+"writepin\system_stm32f1xx.o"
+--strict --scatter "writepin\writepin.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "writepin.map" -o writepin\writepin.axf
