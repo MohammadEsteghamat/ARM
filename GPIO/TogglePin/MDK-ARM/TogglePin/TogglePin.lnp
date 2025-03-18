@@ -1,0 +1,22 @@
+--cpu Cortex-M3
+"togglepin\startup_stm32f103xb.o"
+"togglepin\main.o"
+"togglepin\gpio.o"
+"togglepin\stm32f1xx_it.o"
+"togglepin\stm32f1xx_hal_msp.o"
+"togglepin\stm32f1xx_hal_gpio_ex.o"
+"togglepin\stm32f1xx_hal.o"
+"togglepin\stm32f1xx_hal_rcc.o"
+"togglepin\stm32f1xx_hal_rcc_ex.o"
+"togglepin\stm32f1xx_hal_gpio.o"
+"togglepin\stm32f1xx_hal_dma.o"
+"togglepin\stm32f1xx_hal_cortex.o"
+"togglepin\stm32f1xx_hal_pwr.o"
+"togglepin\stm32f1xx_hal_flash.o"
+"togglepin\stm32f1xx_hal_flash_ex.o"
+"togglepin\stm32f1xx_hal_exti.o"
+"togglepin\system_stm32f1xx.o"
+--strict --scatter "TogglePin\TogglePin.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "TogglePin.map" -o TogglePin\TogglePin.axf
