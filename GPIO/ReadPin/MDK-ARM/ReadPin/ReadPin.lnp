@@ -1,0 +1,22 @@
+--cpu Cortex-M3
+"readpin\startup_stm32f103xb.o"
+"readpin\main.o"
+"readpin\gpio.o"
+"readpin\stm32f1xx_it.o"
+"readpin\stm32f1xx_hal_msp.o"
+"readpin\stm32f1xx_hal_gpio_ex.o"
+"readpin\stm32f1xx_hal.o"
+"readpin\stm32f1xx_hal_rcc.o"
+"readpin\stm32f1xx_hal_rcc_ex.o"
+"readpin\stm32f1xx_hal_gpio.o"
+"readpin\stm32f1xx_hal_dma.o"
+"readpin\stm32f1xx_hal_cortex.o"
+"readpin\stm32f1xx_hal_pwr.o"
+"readpin\stm32f1xx_hal_flash.o"
+"readpin\stm32f1xx_hal_flash_ex.o"
+"readpin\stm32f1xx_hal_exti.o"
+"readpin\system_stm32f1xx.o"
+--strict --scatter "ReadPin\ReadPin.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "ReadPin.map" -o ReadPin\ReadPin.axf
